@@ -164,8 +164,6 @@ function buy(userPrice, userStop, userLimit) {
           '[data-qa="order-review-cta"]'
         );
         orderButtonConfirm.click();
-        const finishButton = await waitForButtonWithText("conf");
-        finishButton.click();
         break;
       }
     }
