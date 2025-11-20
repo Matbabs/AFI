@@ -137,7 +137,7 @@ function buy(userPrice, userStop, userLimit) {
     );
 
     while (true) {
-      await new Promise((r) => setTimeout(r, 1000));
+      await new Promise((r) => setTimeout(r, 500));
       const isNegativeSvg = performance.querySelector("svg");
       if (!isNegativeSvg) {
         continue;
