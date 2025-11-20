@@ -1,0 +1,26 @@
+:root {
+    --spacing: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: var(--spacing);
+    width: fit-content;
+    height: fit-content;
+    font-family: sans-serif;
+}
+
+input+button {
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+}
