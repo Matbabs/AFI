@@ -1,26 +1,41 @@
 :root {
     --spacing: 1rem;
+    --radius: 5px;
+    --dark: black
 }
 
-* {
+*, ::before, ::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 html, body {
-    padding: var(--spacing);
-    width: fit-content;
-    height: fit-content;
+    width: 300px;
     font-family: sans-serif;
 }
 
-input+button {
-    width: 100%;
+input, button {
+    border: solid 1px var(--dark);
+    border-radius: var(--radius);
+    padding: calc(var(--spacing) / 2);
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .form {
+    width: 100%;
+    padding: var(--spacing);
     display: flex;
     flex-direction: column;
     gap: var(--spacing);
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) / 2);
 }
