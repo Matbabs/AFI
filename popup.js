@@ -113,6 +113,7 @@ function buy(userPrice, userStop, userLimit) {
     const orderLayout = await safeGetElement(".orderLayout__action");
     const orderButton = orderLayout.querySelector("button");
     orderButton.click();
+    await new Promise((r) => setTimeout(r, 500));
     const orderButtonConfirm = await safeGetElement(
       '[data-qa="order-review-cta"]'
     );
@@ -121,7 +122,7 @@ function buy(userPrice, userStop, userLimit) {
     finishButton.click();
 
     // wait
-    await new Promise((r) => setTimeout(r, 1000));
+    await new Promise((r) => setTimeout(r, 500));
 
     // setup sell
     const sellTabButton = await safeGetElement("#orderFlowTabs__sellTab");
@@ -160,6 +161,7 @@ function buy(userPrice, userStop, userLimit) {
         const orderLayout = await safeGetElement(".orderLayout__action");
         const orderButton = orderLayout.querySelector("button");
         orderButton.click();
+        await new Promise((r) => setTimeout(r, 500));
         const orderButtonConfirm = await safeGetElement(
           '[data-qa="order-review-cta"]'
         );
