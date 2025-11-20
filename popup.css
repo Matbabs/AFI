@@ -1,7 +1,11 @@
 :root {
     --spacing: 1rem;
-    --radius: 5px;
-    --dark: black
+    --radius: 10px;
+    --dark: black;
+    --light: white;
+    --grey: #f0f3f7;
+    --green: rgba(0, 203, 57, .8);
+    --red: rgba(229, 34, 12, .8)
 }
 
 *, ::before, ::after {
@@ -16,9 +20,26 @@ html, body {
 }
 
 input, button {
-    border: solid 1px var(--dark);
+    border: None;
     border-radius: var(--radius);
     padding: calc(var(--spacing) / 2);
+}
+
+input {
+    background: var(--grey);
+    font-weight: bold;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+}
+
+button {
+    background: var(--dark);
+    color: var(--light);
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 button:hover {
@@ -38,4 +59,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: calc(var(--spacing) / 2);
+}
+
+label {
+    font-weight: bold;
 }
