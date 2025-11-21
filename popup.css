@@ -39,7 +39,6 @@ button {
     background: var(--dark);
     color: var(--light);
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 button:hover {
